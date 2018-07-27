@@ -20,7 +20,7 @@
     "mongoose": "^5.2.4",
     "morgan": "^1.9.0",
     "react": "^15.2.1",
-    "react-addons-update": "^15.6.2", // 이뮤터블 헬퍼
+    "react-addons-update": "^15.6.2", // 이뮤터블 헬퍼 -> 리덕스 스토어의 값을 변동할 때 씀!! :: reducers/auth.js
     "react-dom": "^15.2.1",
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1", // 클라 사이드 라우터 (v4부터 문법이 다르므로 일단 v3를 사용!)

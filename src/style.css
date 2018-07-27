@@ -38,6 +38,7 @@ a {
 .auth .card {
     width: 400px;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 480px) {
@@ -52,6 +53,17 @@ a {
 
 .auth .header {
     font-size: 18px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+
+    /*크롬 또는 사파리*/
+    -webkit-user-select: none;
+    /*모질라*/
+    -moz-user-select: none;
+    /*인터넷익스 10+*/
+    -ms-user-select: none;
+    /*통합 양식*/
+    user-select: none;
 }
 
 .auth .row {

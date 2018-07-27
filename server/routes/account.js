@@ -7,6 +7,7 @@ const router = express.Router();
 
 // POST /api/account/signup (회원가입)
 // BODY SAMPLE: { "username": "test", "password": "test" }
+// ERR 1: BAD ID / 2: BAD PW / 3: EXIST ID
 router.post('/signup', (req, res) => {
 
     // 아이디 체크
@@ -21,6 +22,7 @@ router.post('/signup', (req, res) => {
 
     // 비밀번호 체크
     //typeof: https://msdn.microsoft.com/ko-kr/library/259s7zc1(v=vs.94).aspx
+
     if( req.body.password.length < 4 || typeof req.body.password !== "string"){
         return res.status(400).json({
             error: "Bad password",
@@ -103,9 +105,9 @@ router.post('/signin', (req, res) => {
 });
 
 
-// POST /api/account/getinfo (세션 확인)
+// GET /api/account/getinfo (세션 확인)
 // 새로고침 시 리렌더링 할 때 쿠키 유효성 확인!
-router.post('/getinfo', (req, res) => {
+router.get('/getinfo', (req, res) => {
     if(typeof req.session.loginInfo === "undefined") {
         return res.status(401).json({
             error: 1

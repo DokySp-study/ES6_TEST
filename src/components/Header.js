@@ -16,7 +16,11 @@ class Header extends React.Component {
         );
 
         const logoutBtn = (
-            <li><a><i className="material-icons">lock_open</i></a></li>
+            <li>
+                <a onClick={this.props.onLogout}>
+                    <i className="material-icons">lock_open</i>
+                </a>
+            </li>
         );
 
 
@@ -28,7 +32,7 @@ class Header extends React.Component {
 
             <nav>  {/* 위에 한 줄 */}
                 <div className="nav-wrapper blue darken-1"> {/* 그걸 파랑이로 만듦 */}
-                    <Link to='/' className="brand-logo center">MEMOPAD</Link>
+                    <Link to='/' className="brand-logo center">state.username</Link>
 
                     <ul>
                         <li><a><i className="material-icons">search</i></a></li>

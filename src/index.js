@@ -22,6 +22,7 @@ const store = createStore(reducers, applyMiddleware(thunk));
 const rootElement = document.getElementById('root');
 ReactDOM.render(
     // <App/>
+    // 프로바이더로 묶어주면 이 안에 있는 컨테이너들이 리덕스 스토어를 공유함!
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={App}>
