@@ -51,7 +51,7 @@ class App extends React.Component {
                     document.cookie = 'key=' + btoa(JSON.stringify(loginData));
 
                     // 세션 만료 알림
-                    let $toastContent = $(<span style="color: #FFB4BA">Your session is expired, Please sign-in again.</span>)
+                    let $toastContent = $("<span style='color: #FFB4BA;'>Your session is expired, Please sign-in again.</span>");
                     Materialize.toast($toastContent, 5000);
 
                 }
@@ -88,11 +88,13 @@ class App extends React.Component {
         switch (this.props.location.pathname) {
             case "/login": isAuth = true; break;
             case "/register": isAuth = true; break;
+            case "/workspace" : isAuth = true; break;
         }
 
         return (
             <div>
                 {isAuth ? undefined : <Header
+                                        currentUser={this.props.status.currentUser}
                                         isLoggedIn={this.props.status.isLoggedIn}
                                         onLogout={this.handleLogout}/>}
                 {this.props.children}

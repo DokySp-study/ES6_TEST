@@ -32,17 +32,27 @@ class Header extends React.Component {
 
             <nav>  {/* 위에 한 줄 */}
                 <div className="nav-wrapper blue darken-1"> {/* 그걸 파랑이로 만듦 */}
-                    <Link to='/' className="brand-logo center">state.username</Link>
-
-                    <ul>
-                        <li><a><i className="material-icons">search</i></a></li>
-                    </ul>
+                    <Link to='/' className="brand-logo left title">
+                        <span className="title">
+                            &nbsp; Welcome
+                            <span className="bold">
+                                &nbsp;{this.props.currentUser !== "" ? this.props.currentUser : "COLABO" }
+                            </span>
+                        </span>
+                    </Link>
 
                     <div className="right">
                         <ul>
                             {this.props.isLoggedIn ? logoutBtn : loginBtn}
                         </ul>
                     </div>
+
+                    <div className="right">
+                        <ul>
+                            <li><a><i className="material-icons">search</i></a></li>
+                        </ul>
+                    </div>
+
                 </div>
             </nav>
 

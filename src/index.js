@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 // 라우팅 코드
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 // 컨테이너 컴포넌트
-import {App, Home, Login, Register} from 'containers';
+import {App, Home, Login, Register, Workspace} from 'containers';
 
 // 리덕스 관련 컴포넌트들
 import {Provider} from 'react-redux'; // 리덕스를 리액트에서 묶어주는 역할!!
@@ -30,6 +30,7 @@ ReactDOM.render(
                 <Route path="home" component={Home}/>
                 <Route path="login" component={Login}/>
                 <Route path="register" component={Register}/>
+                <Route path='workspace' components={Workspace}/>
             </Route>
         </Router>
     </Provider>

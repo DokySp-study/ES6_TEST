@@ -42,7 +42,6 @@ app.use(session({
 // express.static 은 정적 파일로 연결해주는 미들웨어 함수!
 app.use('/', express.static(path.join(__dirname, './../public')) );
 
-
 // 벡엔드 라우팅 연결
 app.use('/api',api);
 
@@ -51,7 +50,6 @@ app.use('/api',api);
 app.get('*', (req,res) => {
     res.sendFile(path.resolve(__dirname, "./../public/index.html"));
 });
-
 
 // app.get('/hello', (req,res) => {
 //     return res.send('Hello Codelab');

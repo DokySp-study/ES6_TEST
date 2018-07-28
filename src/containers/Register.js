@@ -81,3 +81,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(Register);
 //
 // 4. 컴포넌트에서 props로 받아오기
 //  (1).
+//
